@@ -4,8 +4,7 @@ label: Indelocator
 baseCommand: ["java", "-Xmx7g", "-jar", "/opt/IndelGenotyper.jar", "-T", "IndelGenotyperV2"]
 requirements:
   - class: DockerRequirement
-    dockerImageId: kamichiotti/indelocator
-#    dockerPull: opengenomics/indelocator-tool:latest
+    dockerPull: opengenomics/indelocator-tool:latest
 
 inputs:
   somatic_flag:
