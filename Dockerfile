@@ -1,7 +1,7 @@
-FROM    java
+FROM    java:7
 
 RUN     apt-get update
-RUN     apt-get install -y wget samtools build-essential git-core cmake zlib1g-dev libncurses-dev
+RUN     apt-get install -y wget build-essential git-core zlib1g-dev libncurses-dev
 
 WORKDIR /opt
 ENV     JAVA_JAR_PATH   /opt
