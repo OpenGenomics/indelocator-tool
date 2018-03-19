@@ -20,12 +20,14 @@ inputs:
   normal:
     type: File
     inputBinding:
+      position: 1
       prefix: --input_file:normal
     secondaryFiles:
       - .bai
   tumor:
     type: File
     inputBinding:
+      position: 2
       prefix: --input_file:tumor
     secondaryFiles:
       - .bai
@@ -40,11 +42,11 @@ inputs:
     type: File
     inputBinding:
       prefix: -L
-  report:
-    type: string
-    default: DEV
+  min_coverage:
+    type: int
+    default: 3
     inputBinding:
-      prefix: -et
+      prefix: --minCoverage
   vcf:
     type: string
     default: indelocator.vcf
@@ -52,7 +54,7 @@ inputs:
       prefix: -o
 
 outputs:
-  output_vcf:
+  mutations:
     type: File
     outputBinding:
       glob: $(inputs.vcf)
