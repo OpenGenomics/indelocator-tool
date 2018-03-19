@@ -52,7 +52,7 @@ inputs:
       prefix: -o
 
 outputs:
-  output_vcf:
+  mutations:
     type: File
     outputBinding:
       glob: $(inputs.vcf)
