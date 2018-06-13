@@ -107,6 +107,13 @@ do
         NORMAL=`echo $NGT:$NDP:$NAD:$NADF:$NADR`
         TUMOR=`echo $TGT:$TDP:$TAD:$TADF:$TADR`
 
+        if [[ $FILTER == "." ]]
+        then
+            FILTER="PASS"
+        else
+            FILTER=`echo "PASS;$FILTER"`
+        fi
+
 
         printf '%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\n' "$CHROM" "$POS" "$ID" "$REF" "$ALT" "$QUAL" "$FILTER" "$INFO" "$FORMAT" "$TUMOR" "$NORMAL" >> $output_vcf
     fi
