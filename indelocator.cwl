@@ -17,6 +17,11 @@ inputs:
     default: true
     inputBinding:
       prefix: -quiet
+  window_size:
+    type: int
+    default: 300
+    inputBinding:
+      prefix: --window-size
   normal:
     type: File
     inputBinding:
