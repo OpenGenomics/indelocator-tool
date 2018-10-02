@@ -39,7 +39,7 @@ inputs:
       - .fai
       - ^.dict
   bed_file:
-    type: File
+    type: File?
     inputBinding:
       prefix: -L
   min_coverage:
