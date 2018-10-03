@@ -21,7 +21,7 @@ inputs:
     type: int
     default: 300
     inputBinding:
-      prefix: --window-size
+      prefix: -ws
   normal:
     type: File
     inputBinding:
